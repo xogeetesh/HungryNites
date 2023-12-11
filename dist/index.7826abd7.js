@@ -2948,34 +2948,51 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-var _header = require("./src/Header");
+var _header = require("./src/components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
-const App = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        className: "text-2xl font-bold underline",
-        children: "Hello world!"
-    }, void 0, false, {
-        fileName: "App.js",
-        lineNumber: 5,
-        columnNumber: 10
-    }, undefined);
+var _footer = require("./src/components/Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _body = require("./src/components/Body");
+var _bodyDefault = parcelHelpers.interopDefault(_body);
+var _shimmer = require("./src/components/Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+const AppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
 };
-_c = App;
+_c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 8,
+    lineNumber: 16,
     columnNumber: 13
 }, undefined));
 var _c;
-$RefreshReg$(_c, "App");
+$RefreshReg$(_c, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-dom/client":"lOjBx","./src/Header":"lhQzv"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-dom/client":"lOjBx","./src/components/Header":"hsJbF","./src/components/Footer":"8pPOA","./src/components/Body":"8yaV8","./src/components/Shimmer":"g6ZGj"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27330,11 +27347,11 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"lhQzv":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9196 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"hsJbF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9196.prelude(module);
+$parcel$ReactRefreshHelpers$bfed.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27342,41 +27359,110 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _hungryNitesLogoPng = require("../images/hungryNites_logo.png");
+var _hungryNitesLogoPng = require("../../images/hungryNites_logo.png");
 var _hungryNitesLogoPngDefault = parcelHelpers.interopDefault(_hungryNitesLogoPng);
-const title = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-        href: "/",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "bg-red-700 h-36",
-            children: "Hey"
+const Title = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+            href: "/",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "h-20 w-22",
+                src: (0, _hungryNitesLogoPngDefault.default),
+                alt: ""
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined)
         }, void 0, false, {
-            fileName: "src/Header.js",
-            lineNumber: 6,
+            fileName: "src/components/Header.js",
+            lineNumber: 5,
             columnNumber: 7
         }, undefined)
-    }, void 0, false, {
-        fileName: "src/Header.js",
-        lineNumber: 4,
-        columnNumber: 5
-    }, undefined)
-}, void 0, false);
-const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: title
     }, void 0, false);
 };
-_c = Header;
+_c = Title;
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex items-center justify-between bg-[#FEFDB8] shadow-xl",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "items-end",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        className: "flex space-x-5 text-xl px-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "About"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 18,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "Cart"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "Login"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 20,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 15,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Header.js",
+            lineNumber: 12,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
+};
+_c1 = Header;
 exports.default = Header;
-var _c;
-$RefreshReg$(_c, "Header");
+var _c, _c1;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "Header");
 
-  $parcel$ReactRefreshHelpers$9196.postlude(module);
+  $parcel$ReactRefreshHelpers$bfed.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/hungryNites_logo.png":"4rMZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4rMZe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../images/hungryNites_logo.png":"4rMZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4rMZe":[function(require,module,exports) {
 module.exports = require("3d3b0c9dac8d6be2").getBundleURL("lly8x") + "hungryNites_logo.184a92a3.png" + "?" + Date.now();
 
 },{"3d3b0c9dac8d6be2":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -27414,6 +27500,1602 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}]},["j2WyO","1xC6H","2Ew96"], "2Ew96", "parcelRequire4927")
+},{}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "This Is My Footer"
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 3,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _config = require("./Config");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _s = $RefreshSig$();
+console.log((0, _shimmerDefault.default));
+//-------------------- Prototype of Cards ----------------------------------------------------------------//
+// Here i am destructuring the things that are passed restaurant.infor
+// and i am only using necessary things
+const RestaurantCard = ({ cloudinaryImageId, name, cuisines, area, lastMileTravelString, locality, avgRating, costForTwo, sla })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " w-[250px] m-5 rounded-lg  shadow-2xl border-0.5  border-gray-10  overflow-hidden hover:scale-95",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "rounded-3xl p-3",
+                src: (0, _config.img_cdn_url) + cloudinaryImageId,
+                alt: ""
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "font-bold text-xl ml-2 ",
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "pl-2 text-sm font-light",
+                children: cuisines.join(", ")
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-around mb-3 mt-2",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "ml-2  bg-green-500 pr-2 text-white font-bold rounded-md",
+                        children: [
+                            "\u2B50",
+                            avgRating
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined),
+                    "\u2022",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "font-medium ml-1 mr-1",
+                        children: sla?.lastMileTravelString ?? "2.0 km"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    "\u2022",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "font-medium ml-1 mr-3",
+                        children: costForTwo ?? "\u20B9200 for two"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 26,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 22,
+        columnNumber: 10
+    }, undefined);
+};
+_c = RestaurantCard;
+//----------------------------------------------------------------------------//
+const Body = ()=>{
+    _s();
+    //------------------------ State Variables ---------------------------------//
+    const [restaurants, setRestaurants] = (0, _react.useState)([]);
+    //--------------------------------------------------------------------------//
+    //---------------------------   Call for API  ------------------------------//
+    async function call_swiggy_api() {
+        const data = await fetch((0, _config.swiggy_api_url));
+        const json = await data.json();
+        setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(json);
+    }
+    (0, _react.useEffect)(()=>{
+        // call for swiggy api
+        call_swiggy_api();
+    }, []);
+    //--------------------------------------------------------------------------//
+    if (restaurants.length == 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 59,
+        columnNumber: 12
+    }, undefined);
+    else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                value: "",
+                placeholder: "Search for restaurants and food"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 62,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                children: "Search"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 63,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-wrap justify-center space-x-3",
+                children: restaurants.map((cur_restaurant)=>{
+                    return /*#__PURE__*/ (0, _react.createElement)(RestaurantCard, {
+                        ...cur_restaurant.info,
+                        key: cur_restaurant.info.id,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 68,
+                            columnNumber: 16
+                        },
+                        __self: undefined
+                    });
+                })
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 66,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "UUwaAnmni1jVfIU2TonQ0iTwxYs=");
+_c1 = Body;
+exports.default = Body;
+var _c, _c1;
+$RefreshReg$(_c, "RestaurantCard");
+$RefreshReg$(_c1, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Config":"4dy05","./Shimmer":"g6ZGj"}],"4dy05":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MENU_ITEM_TYPE_KEY", ()=>MENU_ITEM_TYPE_KEY);
+parcelHelpers.export(exports, "RESTAURANT_TYPE_KEY", ()=>RESTAURANT_TYPE_KEY);
+parcelHelpers.export(exports, "img_cdn_url", ()=>img_cdn_url);
+parcelHelpers.export(exports, "swiggy_api_url", ()=>swiggy_api_url);
+parcelHelpers.export(exports, "Menu_Card_URL_Part_1", ()=>Menu_Card_URL_Part_1);
+parcelHelpers.export(exports, "Menu_Card_URL_Part_2", ()=>Menu_Card_URL_Part_2);
+parcelHelpers.export(exports, "restrauntList", ()=>restrauntList);
+parcelHelpers.export(exports, "burgerKing", ()=>burgerKing);
+const MENU_ITEM_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
+const RESTAURANT_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
+const img_cdn_url = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const swiggy_api_url = "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+const Menu_Card_URL_Part_1 = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=";
+const Menu_Card_URL_Part_2 = "&catalog_qa=undefined&submitAction=ENTER";
+const restrauntList = [
+    {
+        info: {
+            id: "74453",
+            name: "Domino's Pizza",
+            cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+            locality: "Sheetal Shopping Square",
+            areaName: "Athwa",
+            costForTwo: "\u20B9400 for two",
+            cuisines: [
+                "Pizzas",
+                "Italian",
+                "Pastas",
+                "Desserts"
+            ],
+            avgRating: 4.1,
+            veg: true,
+            feeDetails: {
+                restaurantId: "74453",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2100
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2100
+            },
+            parentId: "2456",
+            avgRatingString: "4.1",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 35,
+                serviceability: "SERVICEABLE",
+                slaString: "35 mins",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 00:57:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "\u20B9125 OFF",
+                subHeader: "ABOVE \u20B9899",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/dominos-pizza-sheetal-shopping-square-athwa-surat-74453",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "236083",
+            name: "KFC",
+            cloudinaryImageId: "56c9ab92bd79745fd152a30fa2525426",
+            locality: "LP Savani Road",
+            areaName: "Adajan Gam",
+            costForTwo: "\u20B9400 for two",
+            cuisines: [
+                "Burgers",
+                "Biryani",
+                "American",
+                "Snacks",
+                "Fast Food"
+            ],
+            avgRating: 3.7,
+            feeDetails: {
+                restaurantId: "236083",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4200
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4200
+            },
+            parentId: "547",
+            avgRatingString: "3.7",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 26,
+                lastMileTravel: 7.1,
+                serviceability: "SERVICEABLE",
+                slaString: "26 mins",
+                lastMileTravelString: "7.1 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-16 02:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "20% OFF",
+                subHeader: "UPTO \u20B950",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/kfc-lp-savani-road-adajan-gam-surat-236083",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "72605",
+            name: "Pizza Hut",
+            cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            locality: "Athwa",
+            areaName: "Athwa",
+            costForTwo: "\u20B9350 for two",
+            cuisines: [
+                "Pizzas"
+            ],
+            avgRating: 3.7,
+            feeDetails: {
+                restaurantId: "72605",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2400
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2400
+            },
+            parentId: "721",
+            avgRatingString: "3.7",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 27,
+                lastMileTravel: 4.3,
+                serviceability: "SERVICEABLE",
+                slaString: "27 mins",
+                lastMileTravelString: "4.3 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-16 01:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "50% OFF",
+                subHeader: "UPTO \u20B9100",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/pizza-hut-athwa-surat-72605",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "120319",
+            name: "Maakhan Bhog",
+            cloudinaryImageId: "5854d9bc94b578d24f21575b2b0c582b",
+            locality: "Silicon Shopper",
+            areaName: "Udhna Gam",
+            costForTwo: "\u20B9300 for two",
+            cuisines: [
+                "Desserts"
+            ],
+            avgRating: 4.4,
+            veg: true,
+            feeDetails: {
+                restaurantId: "120319",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2100
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2100
+            },
+            parentId: "6999",
+            avgRatingString: "4.4",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 15,
+                lastMileTravel: 1.7,
+                serviceability: "SERVICEABLE",
+                slaString: "15 mins",
+                lastMileTravelString: "1.7 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 21:30:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "40% OFF",
+                subHeader: "UPTO \u20B980",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/maakhan-bhog-silicon-shopper-udhna-gam-surat-120319",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "65694",
+            name: "Alpha Restaurant",
+            cloudinaryImageId: "zdzduvnbeo8i3jr8xjnz",
+            locality: "Bhatar Road",
+            areaName: "Athwa",
+            costForTwo: "\u20B9300 for two",
+            cuisines: [
+                "Punjabi",
+                "Chinese"
+            ],
+            avgRating: 4.2,
+            veg: true,
+            feeDetails: {
+                restaurantId: "65694",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2100
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2100
+            },
+            parentId: "30581",
+            avgRatingString: "4.2",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 16,
+                lastMileTravel: 2.4,
+                serviceability: "SERVICEABLE",
+                slaString: "16 mins",
+                lastMileTravelString: "2.4 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 15:30:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/alpha-restaurant-bhatar-road-athwa-surat-65694",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "175292",
+            name: "Khapsa House",
+            cloudinaryImageId: "e27288654054102dbb690a64ae43807e",
+            locality: "Shahpore Road",
+            areaName: "Shahpore",
+            costForTwo: "\u20B9100 for two",
+            cuisines: [
+                "Chinese",
+                "North Indian"
+            ],
+            avgRating: 4,
+            feeDetails: {
+                restaurantId: "175292",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2600
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2600
+            },
+            parentId: "117598",
+            avgRatingString: "4.0",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 26,
+                lastMileTravel: 4.5,
+                serviceability: "SERVICEABLE",
+                slaString: "26 mins",
+                lastMileTravelString: "4.5 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 02:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "60% OFF",
+                subHeader: "UPTO \u20B9120",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/khapsa-house-road-shahpore-surat-175292",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "423422",
+            name: "La Pino'z Pizza",
+            cloudinaryImageId: "dmlu2z1eywppyxlhjkqq",
+            locality: "Mahendra Park",
+            areaName: "Magob",
+            costForTwo: "\u20B9300 for two",
+            cuisines: [
+                "Pizzas",
+                "Pastas",
+                "Italian",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 4,
+            veg: true,
+            feeDetails: {
+                restaurantId: "423422",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2600
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2600
+            },
+            parentId: "4961",
+            avgRatingString: "4.0",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 25,
+                lastMileTravel: 4.9,
+                serviceability: "SERVICEABLE",
+                slaString: "25 mins",
+                lastMileTravelString: "4.9 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 02:45:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "50% OFF",
+                subHeader: "UPTO \u20B9100",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/la-pinoz-pizza-mahendra-park-magob-surat-423422",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "236083",
+            name: "KFC",
+            cloudinaryImageId: "56c9ab92bd79745fd152a30fa2525426",
+            locality: "LP Savani Road",
+            areaName: "Adajan Gam",
+            costForTwo: "\u20B9400 for two",
+            cuisines: [
+                "Burgers",
+                "Biryani",
+                "American",
+                "Snacks",
+                "Fast Food"
+            ],
+            avgRating: 3.7,
+            feeDetails: {
+                restaurantId: "236083",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4200
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4200
+            },
+            parentId: "547",
+            avgRatingString: "3.7",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 30,
+                lastMileTravel: 7.1,
+                serviceability: "SERVICEABLE",
+                slaString: "30 mins",
+                lastMileTravelString: "7.1 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 02:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "20% OFF",
+                subHeader: "UPTO \u20B950",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/kfc-lp-savani-road-adajan-gam-surat-236083",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "72605",
+            name: "Pizza Hut",
+            cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            locality: "Athwa",
+            areaName: "Athwa",
+            costForTwo: "\u20B9350 for two",
+            cuisines: [
+                "Pizzas"
+            ],
+            avgRating: 3.7,
+            feeDetails: {
+                restaurantId: "72605",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2400
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2400
+            },
+            parentId: "721",
+            avgRatingString: "3.7",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 29,
+                lastMileTravel: 4.3,
+                serviceability: "SERVICEABLE",
+                slaString: "29 mins",
+                lastMileTravelString: "4.3 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 01:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/pizza-hut-athwa-surat-72605",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "100721",
+            name: "McDonald's",
+            cloudinaryImageId: "ee5f8e06b300efc07c9fe3f4df40dfc4",
+            locality: "Reliance Mall",
+            areaName: "Rustampura",
+            costForTwo: "\u20B9400 for two",
+            cuisines: [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            avgRating: 4.2,
+            feeDetails: {
+                restaurantId: "100721",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 1900
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 1900
+            },
+            parentId: "630",
+            avgRatingString: "4.2",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 23,
+                lastMileTravel: 2.4,
+                serviceability: "SERVICEABLE",
+                slaString: "23 mins",
+                lastMileTravelString: "2.4 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 00:45:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "10% OFF",
+                subHeader: "ABOVE \u20B9999",
+                discountTag: "FLAT DEAL",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/mcdonalds-reliance-mall-rustampura-surat-100721",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "74644",
+            name: "Burger King",
+            cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+            locality: "VIP Road",
+            areaName: "Vesu",
+            costForTwo: "\u20B9350 for two",
+            cuisines: [
+                "Burgers",
+                "American"
+            ],
+            avgRating: 4.2,
+            feeDetails: {
+                restaurantId: "74644",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4400
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4400
+            },
+            parentId: "166",
+            avgRatingString: "4.2",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 27,
+                lastMileTravel: 6.3,
+                serviceability: "SERVICEABLE",
+                slaString: "27 mins",
+                lastMileTravelString: "6.3 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 03:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "60% OFF",
+                subHeader: "UPTO \u20B9120",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/burger-king-vip-road-vesu-surat-74644",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "65028",
+            name: "Subway",
+            cloudinaryImageId: "1ace5fa65eff3e1223feb696c956b38b",
+            locality: "Athwa",
+            areaName: "Athwa",
+            costForTwo: "\u20B9350 for two",
+            cuisines: [
+                "Fast Food",
+                "Healthy Food",
+                "Salads",
+                "Snacks",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 3.8,
+            feeDetails: {
+                restaurantId: "65028",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 2100
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 2100
+            },
+            parentId: "2",
+            avgRatingString: "3.8",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 26,
+                lastMileTravel: 3.5,
+                serviceability: "SERVICEABLE",
+                slaString: "26 mins",
+                lastMileTravelString: "3.5 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 02:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/subway-athwa-surat-65028",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "65430",
+            name: "Urban Punjab",
+            cloudinaryImageId: "fuog43zissspekqlbhtt",
+            locality: "Anand Mahal Road",
+            areaName: "Adajan Gam",
+            costForTwo: "\u20B9250 for two",
+            cuisines: [
+                "Punjabi",
+                "Indian",
+                "North Indian",
+                "Thalis",
+                "Biryani",
+                "Tandoor",
+                "Chinese",
+                "Pizzas",
+                "Pastas"
+            ],
+            avgRating: 4.1,
+            veg: true,
+            feeDetails: {
+                restaurantId: "65430",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3100
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3100
+            },
+            parentId: "5265",
+            avgRatingString: "4.1",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 26,
+                lastMileTravel: 5.8,
+                serviceability: "SERVICEABLE",
+                slaString: "26 mins",
+                lastMileTravelString: "5.8 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 02:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "60% OFF",
+                subHeader: "UPTO \u20B9120",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/urban-punjab-anand-mahal-road-adajan-gam-surat-65430",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "64656",
+            name: "Mahesh Pav Bhaji",
+            cloudinaryImageId: "f015ac61594dc1b4107f9b8735a8d2e7",
+            locality: "Adajan Gam",
+            areaName: "Adajan Gam",
+            costForTwo: "\u20B9250 for two",
+            cuisines: [
+                "North Indian",
+                "Street Food",
+                "South Indian",
+                "Waffle",
+                "Pizzas",
+                "Fast Food"
+            ],
+            avgRating: 4.1,
+            veg: true,
+            feeDetails: {
+                restaurantId: "64656",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4400
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4400
+            },
+            parentId: "6553",
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 28,
+                lastMileTravel: 7,
+                serviceability: "SERVICEABLE",
+                slaString: "28 mins",
+                lastMileTravelString: "7.0 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-08-15 01:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "60% OFF",
+                subHeader: "UPTO \u20B9120",
+                discountCalloutInfo: {
+                    message: "Free Delivery",
+                    logoCtx: {
+                        logo: "v1655895371/free_delivery_logo_hqipbo.png"
+                    }
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/mahesh-pav-bhaji-adajan-gam-surat-64656",
+            type: "WEBLINK"
+        }
+    }
+];
+const burgerKing = {
+    name: "Burger King",
+    image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xbcxtblwjmlj36kqkzjo",
+    rating: "5 stars",
+    place: "Moradabad"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "h-[300px] bg-[#000033] text-white text-4xl flex justify-center items-center",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Looking for a great food near you..."
+                    }, void 0, false, {
+                        fileName: "src/components/Shimmer.js",
+                        lineNumber: 4,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        className: "top-7",
+                        "aria-hidden": "true",
+                        className: "w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600",
+                        viewBox: "0 0 100 101",
+                        fill: "none",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z",
+                                fill: "currentColor"
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 6,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z",
+                                fill: "currentFill"
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 7,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Shimmer.js",
+                        lineNumber: 5,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 3,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-wrap ml-12",
+                children: Array(12).fill("").map((e)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: " w-[250px] m-5 rounded-lg bg-white  shadow-2xl  ",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "w-auto h-[150px] bg-gray-200 m-3 animate-pulse"
+                                }, void 0, false, {
+                                    fileName: "src/components/Shimmer.js",
+                                    lineNumber: 13,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "bg-gray-300 w-[100px] m-3 h-[20px] animate-pulse"
+                                }, void 0, false, {
+                                    fileName: "src/components/Shimmer.js",
+                                    lineNumber: 14,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "bg-gray-300 w-[120px] m-3 h-[20px] animate-pulse"
+                                }, void 0, false, {
+                                    fileName: "src/components/Shimmer.js",
+                                    lineNumber: 15,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "bg-gray-300 w-[200px] m-3 h-[20px] animate-pulse"
+                                }, void 0, false, {
+                                    fileName: "src/components/Shimmer.js",
+                                    lineNumber: 16,
+                                    columnNumber: 17
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Shimmer.js",
+                            lineNumber: 12,
+                            columnNumber: 15
+                        }, undefined)
+                    }, void 0, false))
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["j2WyO","1xC6H","2Ew96"], "2Ew96", "parcelRequire4927")
 
 //# sourceMappingURL=index.7826abd7.js.map
