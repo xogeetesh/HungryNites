@@ -1,8 +1,8 @@
 {
-  "name": "hungry-nites",
+  "name": "hungry-nitess",
   "version": "1.0.0",
   "description": "This is my food ordering app",
-  "main": "App.js",
+ 
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",

@@ -12,7 +12,7 @@ const Title = () => {
 const Header = () => {
   return (
     <>
-      <div className="flex items-center justify-between bg-[#FEFDB8] shadow-xl">
+      <div className="sticky top-0 z-50 flex items-center justify-between bg-[#FEFDB8] shadow-xl">
         <Title />
         <div className="items-end">
           <ul className="flex space-x-5 text-xl px-4">

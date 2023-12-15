@@ -1,12 +1,10 @@
 import React from "react";
 import { restrauntList, swiggy_api_url, img_cdn_url } from "./Config";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
-{
-  console.log(Shimmer);
-}
 //-------------------- Prototype of Cards ----------------------------------------------------------------//
-// Here i am destructuring the things that are passed restaurant.infor
+// Here i am destructuring the things that are passed restaurant.info
 // and i am only using necessary things
 const RestaurantCard = ({
   cloudinaryImageId,
@@ -20,7 +18,7 @@ const RestaurantCard = ({
   sla,
 }) => {
   return (
-    <div className=" w-[250px] m-5 rounded-lg  shadow-2xl border-0.5  border-gray-10  overflow-hidden hover:scale-95">
+    <div className="w-[250px] m-5 rounded-lg  shadow-2xl border-0.5  border-gray-10  overflow-hidden hover:scale-95 cursor-pointer">
       <img
         className="rounded-3xl p-3"
         src={img_cdn_url + cloudinaryImageId}
@@ -44,46 +42,75 @@ const RestaurantCard = ({
     </div>
   );
 };
+//--------------------------Filter data function------------------------------//
+// this will filter data from all restraunts on basis of search Input
+function filterData_function(restraunts, searchInput) {
+  const filterDataa = restraunts.filter((restaurant) =>
+    restaurant?.info?.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+  return filterDataa;
+}
 //----------------------------------------------------------------------------//
+
 const Body = () => {
   //------------------------ State Variables ---------------------------------//
-  const [restaurants, setRestaurants] = useState([]);
-  //--------------------------------------------------------------------------//
+  const [all_restaurants, setAll_restaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   //---------------------------   Call for API  ------------------------------//
   async function call_swiggy_api() {
     const data = await fetch(swiggy_api_url);
     const json = await data.json();
-    setRestaurants(
+    setAll_restaurants(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(json);
+    setFilteredRestaurants(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   }
   useEffect(() => {
     // call for swiggy api
     call_swiggy_api();
   }, []);
   //--------------------------------------------------------------------------//
-  if (restaurants.length == 0) {
+  if (all_restaurants.length == 0) {
     return <Shimmer />;
   } else
     return (
       <>
         {/*-----------------------  Search Bar --------------------------------*/}
-        <input
-          type="text"
-          value=""
-          placeholder="Search for restaurants and food"
-        />
-        <button>Search</button>
-        {/*---------------------------------------------------------------------*/}
+        <div className="flex justify-center h-12 m-6">
+          <input
+            className="pl-[14px] w-[300px] border border-black rounded-l-lg"
+            type="text"
+            value={searchText}
+            placeholder="Search for restaurants and food...."
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            className="h-12 bg-green-500 w-[60px] rounded-r-lg text-sm"
+            onClick={() => {
+              // filter the data
+              const data = filterData_function(all_restaurants, searchText);
+              // update the state of restaurants list
+              setFilteredRestaurants(data);
+            }}
+          >
+            Search
+          </button>
+        </div>
         {/*------------------------ Restaurant Cards--------------------------- */}
-        <div className="flex flex-wrap justify-center space-x-3">
-          {restaurants.map((cur_restaurant) => {
+        <div className="flex flex-wrap justify-center m-2 ">
+          {filteredRestaurants.map((cur_restaurant) => {
             return (
-              <RestaurantCard
-                {...cur_restaurant.info}
-                key={cur_restaurant.info.id}
-              />
+              <a href="https://www.google.com/">
+                <RestaurantCard
+                  {...cur_restaurant.info}
+                  key={cur_restaurant.info.id}
+                />
+              </a>
             );
           })}
         </div>
